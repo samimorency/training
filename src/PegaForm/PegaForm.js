@@ -794,6 +794,18 @@ class PegaForm extends Component {
           }
         }
         break;
+      case fieldTypes.SLIDER:
+        if (readOnly) {
+          fieldElem = this.getReadOnlyText(label, field.value, index);
+        } else {
+            fieldElem = (
+            <div>
+              <input type="range" min="0" max="5" value={value} id="myRange"></input>
+              <lable for="myRange">{label}</lable>
+            </div>
+            );
+        }
+        break;
       case fieldTypes.EMAIL:
       case fieldTypes.PHONE:
       case fieldTypes.INTEGER:
