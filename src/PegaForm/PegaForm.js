@@ -800,8 +800,8 @@ class PegaForm extends Component {
         } else {
             fieldElem = (
             <div>
-              <input type="range" min="0" max="5" value={value} id="myRange"></input>
-              <lable for="myRange">{label}</lable>
+              <label for="myRange">{label}</label>
+              <input type="range" min="0" max="5" defaultValue={value} id="myRange"></input>
             </div>
             );
         }
